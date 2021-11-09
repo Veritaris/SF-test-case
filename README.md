@@ -33,7 +33,7 @@ curl --location --request POST 'http://localhost:8000/api/v1/auth' \
 ### Polls
 #### Manage polls. Requires auth with Bearer token  
 
-**POST**: http://localhost:8000/api/v1/polls/
+#### POST: http://localhost:8000/api/v1/polls/
 
 Required fields:  
 `title`
@@ -51,7 +51,7 @@ Response format:
     "questions": []
 }
 ```
-**GET**
+#### GET
 http://localhost:8000/api/v1/polls/<id>/  
 Get all polls if <id> is missing or poll with specified id  
 
@@ -77,7 +77,7 @@ Response format:
 }
 ```
 
-**PATCH** / **PUT** http://localhost:8000/api/v1/polls/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/<id>/  
 Change given poll 
 
 Optional fields:  
@@ -94,14 +94,14 @@ Response format:
 }
 ```
 
-**DELETE** http://localhost:8000/api/v1/polls/<id>/  
+#### DELETE http://localhost:8000/api/v1/polls/<id>/  
 Delete given poll  
 No fields required, empty response with 204 status is returned
 
 ### Questions  
 #### Manage questions of polls. Requires auth with Bearer token
 
-**POST**: http://localhost:8000/api/v1/questions/
+#### POST: http://localhost:8000/api/v1/questions/
 
 Required fields:  
 `poll_id`, `type`, `text`
@@ -120,7 +120,7 @@ Response format:
     "poll_id": 1
 }
 ```
-**GET**
+#### GET
 http://localhost:8000/api/v1/questions/<id>/  
 Get all questions if <id> is missing or question with specified id  
 
@@ -160,7 +160,7 @@ Response format:
 }
 ```
 
-**PATCH** / **PUT** http://localhost:8000/api/v1/polls/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/<id>/  
 Change given question
 
 Optional fields:  
@@ -177,12 +177,12 @@ Response format:
 }
 ```
 
-**DELETE** http://localhost:8000/api/v1/questions/<id>/
+#### DELETE http://localhost:8000/api/v1/questions/<id>/
 Delete given question  
 No fields required, empty response with 204 status is returned
 
 ### Answers
-**POST**: http://localhost:8000/api/v1/polls/  
+#### POST: http://localhost:8000/api/v1/polls/  
 Voting in the given poll
 
 Required fields:  
@@ -204,7 +204,7 @@ Response format:
     "voter": 1
 }
 ```
-**GET**
+#### GET
 http://localhost:8000/api/v1/answers/<id>/  
 Get all answers if `<id>` is missing or answer with specified id  
 
@@ -240,15 +240,15 @@ Response format:
 }
 ```
 
-**PATCH** / **PUT** http://localhost:8000/api/v1/answers/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/answers/<id>/  
 After creating answer is not editable anymore
 
-**DELETE** http://localhost:8000/api/v1/answers/<id>  
+#### DELETE http://localhost:8000/api/v1/answers/<id>  
 Delete given answer  
 No fields required, empty response with 204 status is returned
 
 ### Voters
-**POST**: http://localhost:8000/api/v1/voters/  
+#### POST: http://localhost:8000/api/v1/voters/  
 You can easily populate your table with new empty voters...but for what? 
 
 Required fields:  
@@ -261,7 +261,7 @@ Response format:
     "voted_polls": []
 }
 ```
-**GET**
+#### GET
 http://localhost:8000/api/v1/polls/<id>/  
 Get all voters if `<id>` is missing or voter with specified id  
 
@@ -339,14 +339,14 @@ Response format:
 }
 ```
 
-**PATCH** / **PUT** http://localhost:8000/api/v1/polls/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/<id>/  
 Change given voter
 
 Optional fields:  
 `id`  
 
-**I do not think that patching voter directly is a good idea**
+#### I do not think that patching voter directly is a good idea
 
-**DELETE** http://localhost:8000/api/v1/voter/<id>/  
+#### DELETE http://localhost:8000/api/v1/voter/<id>/  
 Delete given voter  
 No fields required, empty response with 204 status is returned
