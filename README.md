@@ -259,7 +259,7 @@ Response format:
     "voted_polls": []
 }
 ```
-#### GET http://localhost:8000/api/v1/polls/ID/  
+#### GET http://localhost:8000/api/v1/voters/ID/  
 Get all voters if `ID` is missing or voter with specified id  
 
 Response format:
