@@ -120,8 +120,7 @@ Response format:
     "poll_id": 1
 }
 ```
-#### GET
-http://localhost:8000/api/v1/questions/ID/  
+#### GET http://localhost:8000/api/v1/questions/ID/  
 Get all questions if ID is missing or question with specified id  
 
 Response format:
@@ -160,7 +159,7 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/  
+#### PATCH / PUT http://localhost:8000/api/v1/questions/ID/  
 Change given question
 
 Optional fields:  
@@ -204,8 +203,7 @@ Response format:
     "voter": 1
 }
 ```
-#### GET
-http://localhost:8000/api/v1/answers/ID/  
+#### GET http://localhost:8000/api/v1/answers/ID/  
 Get all answers if `ID` is missing or answer with specified id  
 
 Response format:
@@ -261,8 +259,7 @@ Response format:
     "voted_polls": []
 }
 ```
-#### GET
-http://localhost:8000/api/v1/polls/ID/  
+#### GET http://localhost:8000/api/v1/polls/ID/  
 Get all voters if `ID` is missing or voter with specified id  
 
 Response format:
@@ -339,7 +336,7 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/  
+#### PATCH / PUT http://localhost:8000/api/v1/voters/ID/  
 Change given voter
 
 Optional fields:  
