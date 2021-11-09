@@ -31,9 +31,10 @@ curl --location --request POST 'http://localhost:8000/api/v1/auth' \
 ```
 
 ### Polls
-#### Manage polls. Requires auth with Bearer token  
+#### Manage polls  
 
 #### POST: http://localhost:8000/api/v1/polls/
+**Requires auth with Bearer token**  
 
 Required fields:  
 `title`
@@ -77,7 +78,8 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/
+**Requires auth with Bearer token**    
 Change given poll 
 
 Optional fields:  
@@ -94,14 +96,16 @@ Response format:
 }
 ```
 
-#### DELETE http://localhost:8000/api/v1/polls/ID/  
+#### DELETE http://localhost:8000/api/v1/polls/ID/
+**Requires auth with Bearer token**    
 Delete given poll  
 No fields required, empty response with 204 status is returned
 
 ### Questions  
-#### Manage questions of polls. Requires auth with Bearer token
+#### Manage questions of polls
 
 #### POST: http://localhost:8000/api/v1/questions/
+**Requires auth with Bearer token**  
 
 Required fields:  
 `poll_id`, `type`, `text`
@@ -159,7 +163,8 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/questions/ID/  
+#### PATCH / PUT http://localhost:8000/api/v1/questions/ID/
+**Requires auth with Bearer token**    
 Change given question
 
 Optional fields:  
@@ -177,6 +182,7 @@ Response format:
 ```
 
 #### DELETE http://localhost:8000/api/v1/questions/ID/
+**Requires auth with Bearer token**  
 Delete given question  
 No fields required, empty response with 204 status is returned
 
@@ -238,15 +244,18 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/answers/ID/  
-After creating answer is not editable anymore
+#### PATCH / PUT http://localhost:8000/api/v1/answers/ID/
+**Requires auth with Bearer token**    
+After creating answer is not editable anymore unless you are admin
 
-#### DELETE http://localhost:8000/api/v1/answers/ID/  
+#### DELETE http://localhost:8000/api/v1/answers/ID/
+**Requires auth with Bearer token**    
 Delete given answer  
 No fields required, empty response with 204 status is returned
 
 ### Voters
-#### POST: http://localhost:8000/api/v1/voters/  
+#### POST: http://localhost:8000/api/v1/voters/
+**Requires auth with Bearer token**    
 You can easily populate your table with new empty voters...but for what? 
 
 Required fields:  
@@ -336,7 +345,8 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/voters/ID/  
+#### PATCH / PUT http://localhost:8000/api/v1/voters/ID/
+**Requires auth with Bearer token**    
 Change given voter
 
 Optional fields:  
@@ -344,6 +354,7 @@ Optional fields:
 
 #### I do not think that patching voter directly is a good idea
 
-#### DELETE http://localhost:8000/api/v1/voter/ID/  
+#### DELETE http://localhost:8000/api/v1/voter/ID/
+**Requires auth with Bearer token**    
 Delete given voter  
 No fields required, empty response with 204 status is returned

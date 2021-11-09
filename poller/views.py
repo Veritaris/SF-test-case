@@ -25,11 +25,11 @@ class QuestionViewSet(ModelViewSet):
 
 class AnswerViewSet(ModelViewSet):
     serializer_class = serializers.QuestionAnswerSerializer
-    permission_classes = (permissions.AllowAny, )
+    permission_classes = (poller_permissions.CreateOrAdminOnly, )
     queryset = models.QuestionAnswer.objects.filter(question__poll__deleted__isnull=True)
 
 
 class VoterViewSet(ModelViewSet):
     serializer_class = serializers.VoterSerializer
-    permission_classes = (permissions.AllowAny, )
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
     queryset = models.Voter.objects.get_queryset()
