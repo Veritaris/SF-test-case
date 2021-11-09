@@ -52,8 +52,8 @@ Response format:
 }
 ```
 #### GET
-http://localhost:8000/api/v1/polls/<id>/  
-Get all polls if <id> is missing or poll with specified id  
+http://localhost:8000/api/v1/polls/ID/  
+Get all polls if ID is missing or poll with specified id  
 
 Response format:
 ```json lines
@@ -77,7 +77,7 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/polls/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/  
 Change given poll 
 
 Optional fields:  
@@ -94,7 +94,7 @@ Response format:
 }
 ```
 
-#### DELETE http://localhost:8000/api/v1/polls/<id>/  
+#### DELETE http://localhost:8000/api/v1/polls/ID/  
 Delete given poll  
 No fields required, empty response with 204 status is returned
 
@@ -121,8 +121,8 @@ Response format:
 }
 ```
 #### GET
-http://localhost:8000/api/v1/questions/<id>/  
-Get all questions if <id> is missing or question with specified id  
+http://localhost:8000/api/v1/questions/ID/  
+Get all questions if ID is missing or question with specified id  
 
 Response format:
 ```json lines
@@ -160,7 +160,7 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/polls/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/  
 Change given question
 
 Optional fields:  
@@ -177,7 +177,7 @@ Response format:
 }
 ```
 
-#### DELETE http://localhost:8000/api/v1/questions/<id>/
+#### DELETE http://localhost:8000/api/v1/questions/ID/
 Delete given question  
 No fields required, empty response with 204 status is returned
 
@@ -205,8 +205,8 @@ Response format:
 }
 ```
 #### GET
-http://localhost:8000/api/v1/answers/<id>/  
-Get all answers if `<id>` is missing or answer with specified id  
+http://localhost:8000/api/v1/answers/ID/  
+Get all answers if `ID` is missing or answer with specified id  
 
 Response format:
 ```json lines
@@ -240,10 +240,10 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/answers/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/answers/ID/  
 After creating answer is not editable anymore
 
-#### DELETE http://localhost:8000/api/v1/answers/<id>  
+#### DELETE http://localhost:8000/api/v1/answers/ID/  
 Delete given answer  
 No fields required, empty response with 204 status is returned
 
@@ -262,8 +262,8 @@ Response format:
 }
 ```
 #### GET
-http://localhost:8000/api/v1/polls/<id>/  
-Get all voters if `<id>` is missing or voter with specified id  
+http://localhost:8000/api/v1/polls/ID/  
+Get all voters if `ID` is missing or voter with specified id  
 
 Response format:
 ```json lines
@@ -339,7 +339,7 @@ Response format:
 }
 ```
 
-#### PATCH / PUT http://localhost:8000/api/v1/polls/<id>/  
+#### PATCH / PUT http://localhost:8000/api/v1/polls/ID/  
 Change given voter
 
 Optional fields:  
@@ -347,6 +347,6 @@ Optional fields:
 
 #### I do not think that patching voter directly is a good idea
 
-#### DELETE http://localhost:8000/api/v1/voter/<id>/  
+#### DELETE http://localhost:8000/api/v1/voter/ID/  
 Delete given voter  
 No fields required, empty response with 204 status is returned
